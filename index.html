@@ -13,8 +13,6 @@
   .header-eyebrow { font-size: 11px; letter-spacing: 3px; color: #666; text-transform: uppercase; margin-bottom: 6px; }
   .header h1 { font-size: 24px; font-weight: 700; color: #f0f0f0; }
   .header-sub { font-size: 13px; color: #666; margin-top: 4px; }
-
-  /* Streak Bar */
   .streak-bar { background: #141416; border-bottom: 1px solid #2a2a2e; padding: 14px 16px; display: flex; gap: 10px; }
   .streak-card { flex: 1; background: #1a1a22; border: 1px solid #2a2a35; border-radius: 12px; padding: 12px 14px; }
   .streak-card.highlight { border-color: #f7c94844; background: #1f1a0e; }
@@ -24,16 +22,13 @@
   .streak-num.green { color: #3ecf6e; }
   .streak-label { font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 4px; }
   .streak-sub { font-size: 11px; color: #555; margin-top: 2px; }
-
-  /* Week grid */
   .week-grid { background: #141416; border-bottom: 1px solid #222; padding: 14px 16px; }
   .week-grid-label { font-size: 10px; letter-spacing: 2px; color: #555; text-transform: uppercase; margin-bottom: 10px; font-weight: 600; }
   .week-dots { display: flex; gap: 5px; flex-wrap: wrap; }
-  .week-dot { width: 20px; height: 20px; border-radius: 5px; border: 1px solid #2a2a35; background: #1a1a22; display: flex; align-items: center; justify-content: center; font-size: 9px; color: #444; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+  .week-dot { width: 20px; height: 20px; border-radius: 5px; border: 1px solid #2a2a35; background: #1a1a22; display: flex; align-items: center; justify-content: center; font-size: 9px; color: #444; font-weight: 600; }
   .week-dot.completed { background: #4f8ef7; border-color: #4f8ef7; color: #000; }
   .week-dot.current { border-color: #4f8ef7; color: #4f8ef7; }
   .week-dot.partial { background: #1a2744; border-color: #4f8ef744; color: #4f8ef7; }
-
   .tabs { display: flex; overflow-x: auto; background: #141416; border-bottom: 1px solid #222; padding: 10px 12px; gap: 6px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
   .tabs::-webkit-scrollbar { display: none; }
   .tab { flex-shrink: 0; padding: 9px 16px; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid transparent; background: transparent; color: #555; }
@@ -51,29 +46,30 @@
   .progress-bar-track { background: #222; border-radius: 4px; height: 4px; margin-top: 12px; overflow: hidden; }
   .progress-bar-fill { height: 100%; border-radius: 4px; transition: width 0.3s ease; }
   .exercise-list { display: flex; flex-direction: column; gap: 10px; }
-  .exercise-card { background: #181820; border: 1px solid #2a2a35; border-radius: 12px; padding: 14px 16px; display: flex; align-items: flex-start; gap: 14px; cursor: pointer; transition: opacity 0.15s; }
+  .exercise-card { background: #181820; border: 1px solid #2a2a35; border-radius: 12px; overflow: hidden; }
   .exercise-card.done { opacity: 0.45; background: #141414; }
-  .checkbox { width: 24px; height: 24px; border-radius: 7px; border: 2px solid #444; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+  .exercise-card-top { padding: 14px 16px; display: flex; align-items: flex-start; gap: 14px; cursor: pointer; }
+  .checkbox { width: 24px; height: 24px; border-radius: 7px; border: 2px solid #444; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; }
   .checkbox.checked { border-color: transparent; }
   .check-mark { font-size: 13px; font-weight: 900; color: #000; display: none; }
   .checkbox.checked .check-mark { display: block; }
   .ex-name { font-weight: 600; font-size: 15px; color: #e8e8e8; line-height: 1.3; }
   .exercise-card.done .ex-name { color: #555; }
   .ex-meta { display: flex; align-items: center; gap: 8px; margin-top: 6px; flex-wrap: wrap; }
-  .ex-badge { font-size: 11px; padding: 3px 10px; border-radius: 6px; font-weight: 600; letter-spacing: 0.3px; }
+  .ex-badge { font-size: 11px; padding: 3px 10px; border-radius: 6px; font-weight: 600; }
   .ex-weight { font-size: 12px; color: #666; }
   .ex-tip { font-size: 12px; color: #666; margin-top: 6px; font-style: italic; line-height: 1.4; }
-
-  /* Complete Day Button */
-  .complete-day-btn { width: 100%; padding: 16px; border-radius: 14px; border: none; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 18px; letter-spacing: 0.3px; transition: all 0.15s; }
+  .demo-toggle { width: 100%; background: #12121a; border: none; border-top: 1px solid #2a2a35; padding: 10px 16px; text-align: left; color: #666; font-size: 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+  .demo-section { display: none; background: #0e0e16; border-top: 1px solid #1a1a28; text-align: center; }
+  .demo-section.open { display: block; }
+  .demo-img { max-width: 100%; max-height: 240px; object-fit: contain; display: inline-block; }
+  .demo-error { padding: 20px; color: #555; font-size: 12px; }
+  .complete-day-btn { width: 100%; padding: 16px; border-radius: 14px; border: none; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 18px; }
   .complete-day-btn.ready { background: #4f8ef7; color: #fff; }
   .complete-day-btn.done-btn { background: #1a2744; color: #4f8ef7; border: 1px solid #4f8ef744; }
   .complete-day-btn.locked { background: #1a1a22; color: #444; border: 1px solid #222; cursor: default; }
-
-  /* Toast */
   .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: #1e1e28; border: 1px solid #3a3a4a; border-radius: 12px; padding: 12px 20px; font-size: 14px; font-weight: 600; color: #e8e8e8; opacity: 0; transition: opacity 0.3s; pointer-events: none; white-space: nowrap; z-index: 999; }
   .toast.show { opacity: 1; }
-
   .rest-screen { text-align: center; padding: 60px 20px; }
   .rest-emoji { font-size: 56px; }
   .rest-title { font-size: 18px; font-weight: 600; color: #888; margin-top: 14px; }
@@ -84,8 +80,6 @@
   .tip-icon { font-size: 22px; flex-shrink: 0; }
   .tip-title { font-weight: 600; font-size: 13px; color: #ddd; }
   .tip-body { font-size: 12px; color: #777; margin-top: 3px; line-height: 1.6; }
-
-  /* Reset button */
   .reset-btn { background: transparent; border: 1px solid #2a2a2e; color: #555; font-size: 12px; padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-top: 20px; display: block; margin-left: auto; margin-right: auto; }
 </style>
 </head>
@@ -94,13 +88,13 @@
 <div class="header">
   <div class="header-eyebrow">6-Day Program</div>
   <h1>Conditioning Plan</h1>
-  <div class="header-sub">Lose 7–12 lbs · Build conditioning · 12 weeks</div>
+  <div class="header-sub">Lose 7-12 lbs 路 Build conditioning 路 12 weeks</div>
 </div>
 
 <div class="streak-bar">
   <div class="streak-card highlight">
     <div class="streak-num fire" id="streak-num">0</div>
-    <div class="streak-label">Day Streak 🔥</div>
+    <div class="streak-label">Day Streak 馃敟</div>
     <div class="streak-sub" id="streak-best">Best: 0</div>
   </div>
   <div class="streak-card">
@@ -125,73 +119,103 @@
 <div class="toast" id="toast"></div>
 
 <script>
+var BASE = "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/";
+
+var IMGS = {
+  "chest_press":      "Dumbbell_Bench_Press/0.jpg",
+  "chest_fly":        "Dumbbell_Flyes/0.jpg",
+  "incline_press":    "Incline_Dumbbell_Press/0.jpg",
+  "tricep_kickback":  "Dumbbell_Tricep_Extension_-Pronated_Grip/0.jpg",
+  "tricep_overhead":  "Lying_Dumbbell_Tricep_Extension/0.jpg",
+  "pushup":           "Push-Ups_-_Close_Triceps_Position/0.jpg",
+  "goblet_squat":     "Goblet_Squat/0.jpg",
+  "rdl":              "Stiff-Legged_Dumbbell_Deadlift/0.jpg",
+  "reverse_lunge":    "Dumbbell_Rear_Lunge/0.jpg",
+  "sumo_squat":       "Goblet_Squat/0.jpg",
+  "glute_bridge":     "Single_Leg_Glute_Bridge/0.jpg",
+  "calf_raise":       "Standing_Dumbbell_Calf_Raise/0.jpg",
+  "bent_row":         "Bent_Over_Two-Dumbbell_Row/0.jpg",
+  "single_row":       "One-Arm_Dumbbell_Row/0.jpg",
+  "rear_delt":        "Seated_Bent-Over_Rear_Delt_Raise/0.jpg",
+  "bicep_curl":       "Dumbbell_Bicep_Curl/0.jpg",
+  "hammer_curl":      "Hammer_Curls/0.jpg",
+  "shrug":            "Dumbbell_Shrug/0.jpg",
+  "squat_press":      "Dumbbell_Bench_Press/0.jpg",
+  "deadlift":         "Romanian_Deadlift/0.jpg",
+  "renegade":         "Alternating_Renegade_Row/0.jpg",
+  "lateral_raise":    "Side_Lateral_Raise/0.jpg",
+  "farmers":          "Farmers_Walk/0.jpg",
+  "plank":            "Plank/0.jpg",
+  "russian_twist":    "Russian_Twist/0.jpg"
+};
+
 var plan = [
   {
     day: "Mon", label: "Upper Body", focus: "Chest & Triceps", type: "strength",
-    cardio: "🏃 10 min · Moderate warm-up pace",
+    cardio: "馃弮 10 min 路 Moderate warm-up pace",
     exercises: [
-      { name: "Dumbbell Chest Press", sets: 3, reps: "10-12", weight: "15-25 lb", tip: "Keep feet flat, lower slow (2 sec)" },
-      { name: "Dumbbell Chest Fly", sets: 3, reps: "10-12", weight: "10-15 lb", tip: "Slight bend in elbows, wide arc" },
-      { name: "Incline DB Press", sets: 3, reps: "10", weight: "10-15 lb", tip: "Set bench to ~45 degrees" },
-      { name: "DB Tricep Kickbacks", sets: 3, reps: "12", weight: "10 lb", tip: "Elbow pinned, full extension" },
-      { name: "Overhead Tricep Ext.", sets: 3, reps: "12", weight: "10-15 lb", tip: "One DB, both hands, elbows in" },
-      { name: "Push-Ups", sets: 2, reps: "Max (aim 8-15)", weight: "Bodyweight", tip: "Go to knees if needed, keep core tight" }
+      { name: "Dumbbell Chest Press",   sets: 3, reps: "10-12", weight: "15-25 lb", tip: "Keep feet flat, lower slow (2 sec)",           img: "chest_press" },
+      { name: "Dumbbell Chest Fly",     sets: 3, reps: "10-12", weight: "10-15 lb", tip: "Slight bend in elbows, wide arc",               img: "chest_fly" },
+      { name: "Incline DB Press",       sets: 3, reps: "10",    weight: "10-15 lb", tip: "Set bench to ~45 degrees",                      img: "incline_press" },
+      { name: "DB Tricep Kickbacks",    sets: 3, reps: "12",    weight: "10 lb",    tip: "Elbow pinned, full extension",                  img: "tricep_kickback" },
+      { name: "Overhead Tricep Ext.",   sets: 3, reps: "12",    weight: "10-15 lb", tip: "One DB, both hands, elbows in",                 img: "tricep_overhead" },
+      { name: "Push-Ups",               sets: 2, reps: "Max (aim 8-15)", weight: "Bodyweight", tip: "Go to knees if needed, core tight", img: "pushup" }
     ]
   },
   {
     day: "Tue", label: "Cardio", focus: "Fat Burn + Endurance", type: "cardio",
-    cardio: "🏃 30-35 min · Steady-state",
+    cardio: "馃弮 30-35 min 路 Steady-state",
     exercises: [
-      { name: "Warm-up", sets: 1, reps: "5 min", weight: "Easy pace", tip: "Low resistance or slow walk" },
-      { name: "Steady-State Cardio", sets: 1, reps: "20 min", weight: "Moderate intensity", tip: "Can talk but slightly breathless" },
-      { name: "Cool-down", sets: 1, reps: "5-10 min", weight: "Easy pace", tip: "Bring heart rate back down gradually" }
+      { name: "Warm-up",             sets: 1, reps: "5 min",    weight: "Easy pace",         tip: "Low resistance or slow walk",                 img: null },
+      { name: "Steady-State Cardio", sets: 1, reps: "20 min",   weight: "Moderate intensity",tip: "Can talk but slightly breathless",             img: null },
+      { name: "Cool-down",           sets: 1, reps: "5-10 min", weight: "Easy pace",         tip: "Bring heart rate back down gradually",        img: null }
     ]
   },
   {
     day: "Wed", label: "Lower Body", focus: "Legs & Glutes", type: "strength",
-    cardio: "🏃 10 min · Moderate warm-up pace",
+    cardio: "馃弮 10 min 路 Moderate warm-up pace",
     exercises: [
-      { name: "Goblet Squat", sets: 3, reps: "12-15", weight: "15-25 lb", tip: "Hold DB at chest, knees track over toes" },
-      { name: "DB Romanian Deadlift", sets: 3, reps: "10-12", weight: "15-25 lb", tip: "Hinge at hips, soft bend in knees" },
-      { name: "DB Reverse Lunge", sets: 3, reps: "10 each leg", weight: "10-15 lb", tip: "Step back, front knee over ankle" },
-      { name: "DB Sumo Squat", sets: 3, reps: "12", weight: "15-25 lb", tip: "Wide stance, toes out 45 degrees" },
-      { name: "Glute Bridge", sets: 3, reps: "15", weight: "15-25 lb on hips", tip: "Squeeze glutes at top, hold 1 sec" },
-      { name: "Calf Raises", sets: 3, reps: "20", weight: "Bodyweight or 10 lb", tip: "Slow and controlled, full range" }
+      { name: "Goblet Squat",          sets: 3, reps: "12-15",     weight: "15-25 lb",      tip: "Hold DB at chest, knees track over toes",      img: "goblet_squat" },
+      { name: "DB Romanian Deadlift",  sets: 3, reps: "10-12",     weight: "15-25 lb",      tip: "Hinge at hips, soft bend in knees",            img: "rdl" },
+      { name: "DB Reverse Lunge",      sets: 3, reps: "10 each",   weight: "10-15 lb",      tip: "Step back, front knee over ankle",             img: "reverse_lunge" },
+      { name: "DB Sumo Squat",         sets: 3, reps: "12",        weight: "15-25 lb",      tip: "Wide stance, toes out 45 degrees",             img: "sumo_squat" },
+      { name: "Glute Bridge",          sets: 3, reps: "15",        weight: "15-25 lb hips", tip: "Squeeze glutes at top, hold 1 sec",            img: "glute_bridge" },
+      { name: "Calf Raises",           sets: 3, reps: "20",        weight: "BW or 10 lb",   tip: "Slow and controlled, full range",              img: "calf_raise" }
     ]
   },
   {
     day: "Thu", label: "Upper Body", focus: "Back & Biceps", type: "strength",
-    cardio: "🏃 10 min · Moderate warm-up pace",
+    cardio: "馃弮 10 min 路 Moderate warm-up pace",
     exercises: [
-      { name: "DB Bent-Over Row", sets: 3, reps: "10-12", weight: "15-25 lb", tip: "Flat back, pull elbow to hip" },
-      { name: "Single-Arm Row", sets: 3, reps: "10-12 each", weight: "15-25 lb", tip: "Use bench for support" },
-      { name: "DB Rear Delt Fly", sets: 3, reps: "12", weight: "5-10 lb", tip: "Hinge forward, arms wide like wings" },
-      { name: "DB Bicep Curl", sets: 3, reps: "12", weight: "10-15 lb", tip: "Elbows fixed at sides, controlled descent" },
-      { name: "Hammer Curl", sets: 3, reps: "12", weight: "10-15 lb", tip: "Neutral grip (thumbs up)" },
-      { name: "Shrugs", sets: 2, reps: "15", weight: "20-25 lb", tip: "Straight up, hold 1 sec, no rolling" }
+      { name: "DB Bent-Over Row",  sets: 3, reps: "10-12",      weight: "15-25 lb", tip: "Flat back, pull elbow to hip",              img: "bent_row" },
+      { name: "Single-Arm Row",    sets: 3, reps: "10-12 each", weight: "15-25 lb", tip: "Use bench for support",                     img: "single_row" },
+      { name: "DB Rear Delt Fly",  sets: 3, reps: "12",         weight: "5-10 lb",  tip: "Hinge forward, arms wide like wings",       img: "rear_delt" },
+      { name: "DB Bicep Curl",     sets: 3, reps: "12",         weight: "10-15 lb", tip: "Elbows fixed at sides, controlled descent", img: "bicep_curl" },
+      { name: "Hammer Curl",       sets: 3, reps: "12",         weight: "10-15 lb", tip: "Neutral grip (thumbs up)",                  img: "hammer_curl" },
+      { name: "Shrugs",            sets: 2, reps: "15",         weight: "20-25 lb", tip: "Straight up, hold 1 sec, no rolling",       img: "shrug" }
     ]
   },
   {
     day: "Fri", label: "HIIT + Core", focus: "Calorie Burn + Core", type: "hiit",
-    cardio: "26 25-30 min total · Intervals",
+    cardio: "26 25-30 min total 路 Intervals",
     exercises: [
-      { name: "HIIT Warm-up", sets: 1, reps: "5 min", weight: "Easy", tip: "Get your HR elevated gradually" },
-      { name: "HIIT Intervals", sets: 8, reps: "30 sec hard / 90 sec easy", weight: "High effort", tip: "Bike: resistance up. Treadmill: incline or speed" },
-      { name: "Plank", sets: 3, reps: "20-30 sec", weight: "Bodyweight", tip: "Hips level, don't let lower back sag" },
-      { name: "Dead Bug", sets: 3, reps: "8 each side", weight: "Bodyweight", tip: "Lower back pressed to floor the whole time" },
-      { name: "Russian Twist", sets: 3, reps: "10 each side", weight: "5-10 lb DB", tip: "Lean back slightly, control the rotation" }
+      { name: "HIIT Warm-up",    sets: 1, reps: "5 min",               weight: "Easy",       tip: "Get your HR elevated gradually",                      img: null },
+      { name: "HIIT Intervals",  sets: 8, reps: "30 sec hard/90 easy", weight: "High effort",tip: "Bike: resistance up. Treadmill: incline or speed",    img: null },
+      { name: "Plank",           sets: 3, reps: "20-30 sec",           weight: "Bodyweight", tip: "Hips level, do not let lower back sag",               img: "plank" },
+      { name: "Dead Bug",        sets: 3, reps: "8 each side",         weight: "Bodyweight", tip: "Lower back pressed to floor the whole time",          img: null },
+      { name: "Russian Twist",   sets: 3, reps: "10 each side",        weight: "5-10 lb DB", tip: "Lean back slightly, control the rotation",            img: "russian_twist" }
     ]
   },
   {
     day: "Sat", label: "Full Body", focus: "Compound Movements", type: "strength",
-    cardio: "🏃 10 min · Moderate warm-up pace",
+    cardio: "馃弮 10 min 路 Moderate warm-up pace",
     exercises: [
-      { name: "DB Squat to Press", sets: 3, reps: "10", weight: "10-15 lb", tip: "Squat down, press overhead as you stand" },
-      { name: "DB Deadlift", sets: 3, reps: "10-12", weight: "20-25 lb", tip: "Drive through heels, squeeze glutes at top" },
-      { name: "Renegade Row", sets: 3, reps: "6-8 each", weight: "10-15 lb", tip: "Plank position, row one arm at a time" },
-      { name: "DB Lateral Raise", sets: 3, reps: "12", weight: "5-10 lb", tip: "Arms at T, slightly forward, no momentum" },
-      { name: "DB Chest Press", sets: 3, reps: "10-12", weight: "15-25 lb", tip: "Full range, controlled" },
-      { name: "Farmer's Carry", sets: 3, reps: "30-40 ft walk", weight: "20-25 lb each", tip: "Tall posture, core braced, slow steps" }
+      { name: "DB Squat to Press", sets: 3, reps: "10",       weight: "10-15 lb",    tip: "Squat down, press overhead as you stand",     img: "squat_press" },
+      { name: "DB Deadlift",       sets: 3, reps: "10-12",    weight: "20-25 lb",    tip: "Drive through heels, squeeze glutes at top",  img: "deadlift" },
+      { name: "Renegade Row",      sets: 3, reps: "6-8 each", weight: "10-15 lb",    tip: "Plank position, row one arm at a time",       img: "renegade" },
+      { name: "DB Lateral Raise",  sets: 3, reps: "12",       weight: "5-10 lb",     tip: "Arms at T, slightly forward, no momentum",    img: "lateral_raise" },
+      { name: "DB Chest Press",    sets: 3, reps: "10-12",    weight: "15-25 lb",    tip: "Full range, controlled",                      img: "chest_press" },
+      { name: "Farmers Carry",     sets: 3, reps: "30-40 ft", weight: "20-25 lb ea", tip: "Tall posture, core braced, slow steps",       img: "farmers" }
     ]
   },
   {
@@ -201,345 +225,267 @@ var plan = [
 ];
 
 var tips = [
-  { icon: "🥗", title: "Calorie deficit", body: "Aim for ~300-500 cal/day under maintenance. At 167 lb, ~2,200-2,400 cal/day is a good start." },
-  { icon: "💧", title: "Hydration", body: "Drink at least 80-100 oz of water daily. More on workout days." },
-  { icon: "😴", title: "Sleep", body: "7-8 hours is where fat loss and muscle retention happen. Non-negotiable." },
-  { icon: "📈", title: "Progressive overload", body: "Once 12 reps feel easy, bump to the next dumbbell weight." },
-  { icon: "⚖️", title: "Timeline", body: "At 1 lb/week, you could hit 155-160 in 7-12 weeks with consistency." }
+  { icon: "馃", title: "Calorie deficit",      body: "Aim for ~300-500 cal/day under maintenance. At 167 lb, ~2,200-2,400 cal/day is a good start." },
+  { icon: "馃挧", title: "Hydration",             body: "Drink at least 80-100 oz of water daily. More on workout days." },
+  { icon: "馃槾", title: "Sleep",                 body: "7-8 hours is where fat loss and muscle retention happen. Non-negotiable." },
+  { icon: "馃搱", title: "Progressive overload",  body: "Once 12 reps feel easy, bump to the next dumbbell weight." },
+  { icon: "鈿栵笍", title: "Timeline",              body: "At 1 lb/week, you could hit 155-160 in 7-12 weeks with consistency." }
 ];
 
-var typeColors = {
-  strength: { bg: "#1a2744", border: "#4f8ef722", accent: "#4f8ef7", badgeBg: "#0d1b36" },
-  cardio:   { bg: "#0f2d1f", border: "#3ecf6e22", accent: "#3ecf6e", badgeBg: "#082015" },
-  hiit:     { bg: "#2d1a0e", border: "#f7884f22", accent: "#f7884f", badgeBg: "#1e0f07" },
-  rest:     { bg: "#1c1c1c", border: "#33333322", accent: "#888",    badgeBg: "#111" }
+var TC = {
+  strength: { bg: "#1a2744", bdr: "#4f8ef722", ac: "#4f8ef7", bb: "#0d1b36" },
+  cardio:   { bg: "#0f2d1f", bdr: "#3ecf6e22", ac: "#3ecf6e", bb: "#082015" },
+  hiit:     { bg: "#2d1a0e", bdr: "#f7884f22", ac: "#f7884f", bb: "#1e0f07" },
+  rest:     { bg: "#1c1c1c", bdr: "#33333322", ac: "#888888", bb: "#111111" }
 };
 
-// ── Persistence helpers ──────────────────────────────────────────────────────
-function saveState() {
+var checked = {};
+var completedDays = [];
+var streakData = { current: 0, best: 0 };
+var activeDay = 0;
+
+function save() {
   try {
-    localStorage.setItem('cp_checked', JSON.stringify(checked));
-    localStorage.setItem('cp_completed', JSON.stringify(completedDays));
-    localStorage.setItem('cp_streak', JSON.stringify(streakData));
+    localStorage.setItem("cp_c", JSON.stringify(checked));
+    localStorage.setItem("cp_d", JSON.stringify(completedDays));
+    localStorage.setItem("cp_s", JSON.stringify(streakData));
   } catch(e) {}
 }
-
-function loadState() {
+function load() {
   try {
-    var c = localStorage.getItem('cp_checked');
-    var d = localStorage.getItem('cp_completed');
-    var s = localStorage.getItem('cp_streak');
+    var c = localStorage.getItem("cp_c");
+    var d = localStorage.getItem("cp_d");
+    var s = localStorage.getItem("cp_s");
     if (c) checked = JSON.parse(c);
     if (d) completedDays = JSON.parse(d);
     if (s) streakData = JSON.parse(s);
   } catch(e) {}
 }
+load();
 
-// ── State ────────────────────────────────────────────────────────────────────
-// checked: { "dayIdx-exIdx": bool }  (per active workout day view)
-// completedDays: [ "W1D0", "W1D1", ... ]  week/day keys
-// streakData: { current, best, lastCompletedKey }
-
-var checked = {};
-var completedDays = [];   // array of "W{w}D{d}" strings
-var streakData = { current: 0, best: 0, lastKey: null };
-var activeDay = 0;
-
-loadState();
-
-// ── Streak helpers ───────────────────────────────────────────────────────────
-function getCurrentWeek() {
-  // week = floor(completedDays.length / 6) but capped at 11 (0-indexed)
-  // A week is complete when 6 workout days (Mon-Sat) done
-  var workoutDays = completedDays.filter(function(k) { return !k.match(/D6$/); });
-  return Math.min(11, Math.floor(workoutDays.length / 6));
-}
-
-function getCompletedWeeksCount() {
-  var counts = {};
-  for (var i = 0; i < completedDays.length; i++) {
-    var k = completedDays[i];
-    var w = k.split('D')[0];
-    if (!counts[w]) counts[w] = 0;
-    counts[w]++;
+function checkedCount(di) {
+  var n = 0;
+  for (var i = 0; i < plan[di].exercises.length; i++) {
+    if (checked[di + "," + i]) n++;
   }
-  var full = 0;
-  for (var w in counts) { if (counts[w] >= 6) full++; }
-  return full;
+  return n;
 }
-
-function makeKey(week, dayIdx) {
-  return 'W' + week + 'D' + dayIdx;
-}
-
-function isDayCompleted(week, dayIdx) {
-  return completedDays.indexOf(makeKey(week, dayIdx)) !== -1;
-}
-
-function getCurrentWorkoutWeek() {
-  // Which week are we currently on (0-indexed)
-  var workoutDone = completedDays.filter(function(k) { return !k.match(/D6$/); }).length;
-  return Math.min(11, Math.floor(workoutDone / 6));
-}
-
-function getWeekDaysDone(week) {
-  var count = 0;
-  for (var d = 0; d < 6; d++) {
-    if (isDayCompleted(week, d)) count++;
-  }
-  return count;
-}
-
-function completeDay(dayIdx) {
-  var week = getCurrentWorkoutWeek();
-  var key = makeKey(week, dayIdx);
-  if (completedDays.indexOf(key) !== -1) return; // already done
-
-  completedDays.push(key);
-
-  // Update streak
-  streakData.current++;
-  if (streakData.current > streakData.best) streakData.best = streakData.current;
-  streakData.lastKey = key;
-
-  saveState();
-  renderStreakBar();
-  renderWeekGrid();
-  renderAll();
-
-  var weeksDone = getCompletedWeeksCount();
-  if (getWeekDaysDone(week) === 6) {
-    showToast('Week ' + (week + 1) + ' complete! 🎉');
-  } else {
-    showToast('Day logged! 🔥 Streak: ' + streakData.current);
-  }
-}
-
-function uncompleteDay(dayIdx) {
-  var week = getCurrentWorkoutWeek();
-  var key = makeKey(week, dayIdx);
-  var idx = completedDays.indexOf(key);
-  if (idx === -1) return;
-  completedDays.splice(idx, 1);
-  if (streakData.current > 0) streakData.current--;
-  saveState();
-  renderStreakBar();
-  renderWeekGrid();
-  renderAll();
-}
-
-// ── Toast ────────────────────────────────────────────────────────────────────
-var toastTimer = null;
-function showToast(msg) {
-  var t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  if (toastTimer) clearTimeout(toastTimer);
-  toastTimer = setTimeout(function() { t.classList.remove('show'); }, 2500);
-}
-
-// ── Streak bar render ────────────────────────────────────────────────────────
-function renderStreakBar() {
-  document.getElementById('streak-num').textContent = streakData.current;
-  document.getElementById('streak-best').textContent = 'Best: ' + streakData.best;
-  document.getElementById('weeks-num').textContent = getCompletedWeeksCount();
-  var totalWorkoutDays = completedDays.filter(function(k) { return !k.match(/D6$/); }).length;
-  document.getElementById('days-total-num').textContent = totalWorkoutDays;
-}
-
-// ── Week grid render ─────────────────────────────────────────────────────────
-function renderWeekGrid() {
-  var currentWeek = getCurrentWorkoutWeek();
-  var html = '';
-  for (var w = 0; w < 12; w++) {
-    var done = getWeekDaysDone(w);
-    var cls = 'week-dot';
-    var label = 'W' + (w + 1);
-    if (done === 6) {
-      cls += ' completed';
-    } else if (w === currentWeek && done > 0) {
-      cls += ' partial';
-    } else if (w === currentWeek) {
-      cls += ' current';
-    }
-    html += '<div class="' + cls + '" title="Week ' + (w+1) + ': ' + done + '/6 days">' + (w+1) + '</div>';
-  }
-  document.getElementById('week-dots').innerHTML = html;
-}
-
-// ── Tabs & Panels ────────────────────────────────────────────────────────────
-function getCheckedCount(dayIdx) {
-  var count = 0;
-  for (var i = 0; i < plan[dayIdx].exercises.length; i++) {
-    if (checked[dayIdx + '-' + i]) count++;
-  }
-  return count;
-}
-
-function allExercisesDone(dayIdx) {
-  var d = plan[dayIdx];
-  if (d.exercises.length === 0) return false;
+function allDone(di) {
+  var d = plan[di];
+  if (!d.exercises.length) return false;
   for (var i = 0; i < d.exercises.length; i++) {
-    if (!checked[dayIdx + '-' + i]) return false;
+    if (!checked[di + "," + i]) return false;
   }
   return true;
 }
+function wkey(w, di) { return "W" + w + "D" + di; }
+function dayLogged(w, di) { return completedDays.indexOf(wkey(w, di)) !== -1; }
+function curWeek() {
+  var n = completedDays.filter(function(k){ return !/D6$/.test(k); }).length;
+  return Math.min(11, Math.floor(n / 6));
+}
+function weeksDone() {
+  var cnt = {};
+  completedDays.forEach(function(k){ var w=k.split("D")[0]; cnt[w]=(cnt[w]||0)+1; });
+  var f=0; for(var w in cnt){ if(cnt[w]>=6) f++; } return f;
+}
+function weekDaysDone(w) {
+  var n=0; for(var d=0;d<6;d++){ if(dayLogged(w,d)) n++; } return n;
+}
 
-function renderAll() {
-  renderTabs();
-  renderPanels();
+function logDay(di) {
+  var w = curWeek();
+  var k = wkey(w, di);
+  if (completedDays.indexOf(k) !== -1) return;
+  completedDays.push(k);
+  streakData.current++;
+  if (streakData.current > streakData.best) streakData.best = streakData.current;
+  save(); renderStreak(); renderGrid(); renderAll();
+  showToast(weekDaysDone(w) === 6 ? "Week " + (w+1) + " complete! 馃帀" : "Day logged! 馃敟 Streak: " + streakData.current);
+}
+function unlogDay(di) {
+  var w = curWeek(); var k = wkey(w,di);
+  var idx = completedDays.indexOf(k);
+  if (idx === -1) return;
+  completedDays.splice(idx,1);
+  if (streakData.current > 0) streakData.current--;
+  save(); renderStreak(); renderGrid(); renderAll();
+}
+
+var toastT = null;
+function showToast(msg) {
+  var el = document.getElementById("toast");
+  el.textContent = msg; el.classList.add("show");
+  if (toastT) clearTimeout(toastT);
+  toastT = setTimeout(function(){ el.classList.remove("show"); }, 2500);
+}
+
+function renderStreak() {
+  document.getElementById("streak-num").textContent = streakData.current;
+  document.getElementById("streak-best").textContent = "Best: " + streakData.best;
+  document.getElementById("weeks-num").textContent = weeksDone();
+  var tot = completedDays.filter(function(k){ return !/D6$/.test(k); }).length;
+  document.getElementById("days-total-num").textContent = tot;
+}
+
+function renderGrid() {
+  var cw = curWeek(); var html = "";
+  for (var w=0; w<12; w++) {
+    var done = weekDaysDone(w);
+    var cls = "week-dot";
+    if (done===6) cls+=" completed";
+    else if (w===cw && done>0) cls+=" partial";
+    else if (w===cw) cls+=" current";
+    html += "<div class='" + cls + "'>" + (w+1) + "</div>";
+  }
+  document.getElementById("week-dots").innerHTML = html;
+}
+
+function toggleDemo(id) {
+  var sec = document.getElementById("ds-" + id);
+  var btn = document.getElementById("db-" + id);
+  if (!sec) return;
+  var open = sec.classList.contains("open");
+  sec.classList.toggle("open");
+  btn.textContent = open ? "Show demo" : "Hide demo";
+  if (!open) {
+    var img = sec.querySelector("img");
+    if (img && !img.getAttribute("src")) {
+      img.setAttribute("src", img.getAttribute("data-src"));
+    }
+  }
+}
+
+function toggleCheck(key, di) {
+  checked[key] = !checked[key];
+  save(); renderAll();
 }
 
 function renderTabs() {
-  var html = '';
-  for (var i = 0; i < plan.length; i++) {
-    var d = plan[i];
-    var c = typeColors[d.type];
-    var isActive = i === activeDay;
-    var style = isActive
-      ? 'background:' + c.bg + ';color:' + c.accent + ';border:1px solid ' + c.accent + ';'
-      : 'background:transparent;color:#555;border:1px solid transparent;';
-    html += '<button class="tab" style="' + style + '" onclick="switchDay(' + i + ')">' + d.day + '</button>';
+  var html = "";
+  for (var i=0; i<plan.length; i++) {
+    var c = TC[plan[i].type];
+    var act = i === activeDay;
+    var st = act
+      ? "background:" + c.bg + ";color:" + c.ac + ";border:1px solid " + c.ac + ";"
+      : "background:transparent;color:#555;border:1px solid transparent;";
+    html += "<button class='tab' style='" + st + "' onclick='switchDay(" + i + ")'>" + plan[i].day + "</button>";
   }
-  document.getElementById('tabs').innerHTML = html;
+  document.getElementById("tabs").innerHTML = html;
 }
 
 function renderPanels() {
-  var html = '';
-  var currentWeek = getCurrentWorkoutWeek();
+  var html = "";
+  var cw = curWeek();
 
-  for (var dayIdx = 0; dayIdx < plan.length; dayIdx++) {
-    var d = plan[dayIdx];
-    var c = typeColors[d.type];
+  for (var di=0; di<plan.length; di++) {
+    var d = plan[di];
+    var c = TC[d.type];
     var total = d.exercises.length;
-    var done = getCheckedCount(dayIdx);
-    var barPct = total > 0 ? Math.round((done / total) * 100) : 0;
-    var isActive = dayIdx === activeDay;
-    var dayCompleted = isDayCompleted(currentWeek, dayIdx);
-    var innerHtml = '';
+    var done = checkedCount(di);
+    var pct = total > 0 ? Math.round(done/total*100) : 0;
+    var logged = dayLogged(cw, di);
+    var inner = "";
 
-    var headerStyle = 'background:' + c.bg + ';border:1px solid ' + c.border + ';border-left:3px solid ' + c.accent + ';';
+    var hst = "background:" + c.bg + ";border:1px solid " + c.bdr + ";border-left:3px solid " + c.ac + ";";
 
-    if (d.type === 'rest') {
-      innerHtml += '<div class="day-header" style="' + headerStyle + '">'
-        + '<div class="day-type-label" style="color:' + c.accent + '">REST</div>'
-        + '<div class="day-title">' + d.label + '</div>'
-        + '<div class="day-focus">' + d.focus + '</div>'
-        + '</div>';
-      innerHtml += '<div class="rest-screen"><div class="rest-emoji">😮&zwj;💨</div>'
-        + '<div class="rest-title">Recovery Day</div>'
-        + '<div class="rest-body">Light walking, stretching, or full rest. Your muscles grow while you rest.</div></div>';
+    if (d.type === "rest") {
+      inner += "<div class='day-header' style='" + hst + "'>"
+        + "<div class='day-type-label' style='color:" + c.ac + "'>REST</div>"
+        + "<div class='day-title'>" + d.label + "</div>"
+        + "<div class='day-focus'>" + d.focus + "</div>"
+        + "</div>";
+      inner += "<div class='rest-screen'><div class='rest-emoji'>馃槷鈥嶐煉?/div>"
+        + "<div class='rest-title'>Recovery Day</div>"
+        + "<div class='rest-body'>Light walking, stretching, or full rest. Your muscles grow while you rest.</div></div>";
     } else {
-      innerHtml += '<div class="day-header" style="' + headerStyle + '">'
-        + '<div class="day-header-row">'
-        + '<div>'
-        + '<div class="day-type-label" style="color:' + c.accent + '">' + d.type.toUpperCase() + '</div>'
-        + '<div class="day-title">' + d.label + '</div>'
-        + '<div class="day-focus">' + d.focus + '</div>'
-        + (d.cardio ? '<div class="day-cardio" style="color:' + c.accent + '">' + d.cardio + '</div>' : '')
-        + '</div>'
-        + '<div class="progress-count">'
-        + '<div class="num" style="color:' + c.accent + '">' + done + '/' + total + '</div>'
-        + '<div class="lbl">done</div>'
-        + '</div>'
-        + '</div>'
-        + '<div class="progress-bar-track"><div class="progress-bar-fill" style="width:' + barPct + '%;background:' + c.accent + '"></div></div>'
-        + '</div>';
+      inner += "<div class='day-header' style='" + hst + "'>"
+        + "<div class='day-header-row'><div>"
+        + "<div class='day-type-label' style='color:" + c.ac + "'>" + d.type.toUpperCase() + "</div>"
+        + "<div class='day-title'>" + d.label + "</div>"
+        + "<div class='day-focus'>" + d.focus + "</div>"
+        + (d.cardio ? "<div class='day-cardio' style='color:" + c.ac + "'>" + d.cardio + "</div>" : "")
+        + "</div><div class='progress-count'>"
+        + "<div class='num' style='color:" + c.ac + "'>" + done + "/" + total + "</div>"
+        + "<div class='lbl'>done</div></div></div>"
+        + "<div class='progress-bar-track'><div class='progress-bar-fill' style='width:" + pct + "%;background:" + c.ac + "'></div></div>"
+        + "</div>";
 
-      // Exercises
-      innerHtml += '<div class="exercise-list">';
-      for (var i = 0; i < d.exercises.length; i++) {
+      inner += "<div class='exercise-list'>";
+      for (var i=0; i<d.exercises.length; i++) {
         var ex = d.exercises[i];
-        var key = dayIdx + '-' + i;
-        var isDone = !!checked[key];
-        var cardStyle = isDone ? 'opacity:0.45;background:#141414;' : '';
-        var cbStyle = isDone ? 'border-color:transparent;background:' + c.accent + ';' : '';
-        innerHtml += '<div class="exercise-card' + (isDone ? ' done' : '') + '" style="' + cardStyle + '" onclick="toggleCheck(\'' + key + '\',' + dayIdx + ')">'
-          + '<div class="checkbox' + (isDone ? ' checked' : '') + '" style="' + cbStyle + '">'
-          + '<span class="check-mark">&#x2713;</span>'
-          + '</div>'
-          + '<div style="flex:1">'
-          + '<div class="ex-name">' + ex.name + '</div>'
-          + '<div class="ex-meta">'
-          + '<span class="ex-badge" style="background:' + c.badgeBg + ';color:' + c.accent + '">' + ex.sets + ' x ' + ex.reps + '</span>'
-          + '<span class="ex-weight">' + ex.weight + '</span>'
-          + '</div>'
-          + '<div class="ex-tip">💡 ' + ex.tip + '</div>'
-          + '</div>'
-          + '</div>';
-      }
-      innerHtml += '</div>';
+        var ck = di + "," + i;
+        var isDone = !!checked[ck];
+        var cst = isDone ? "opacity:0.45;background:#141414;" : "";
+        var cbst = isDone ? "border-color:transparent;background:" + c.ac + ";" : "";
+        var uid = di + "_" + i;
 
-      // Complete Day Button
-      var allDone = allExercisesDone(dayIdx);
-      var btnClass, btnText, btnOnclick;
-      if (dayCompleted) {
-        btnClass = 'complete-day-btn done-btn';
-        btnText = '✓ Day ' + d.day + ' Logged — Tap to undo';
-        btnOnclick = 'uncompleteDay(' + dayIdx + ')';
-      } else if (allDone) {
-        btnClass = 'complete-day-btn ready';
-        btnText = 'Log ' + d.day + ' as Complete 🔥';
-        btnOnclick = 'completeDay(' + dayIdx + ')';
+        inner += "<div class='exercise-card" + (isDone ? " done" : "") + "' style='" + cst + "'>";
+        inner += "<div class='exercise-card-top' onclick='toggleCheck(\"" + ck + "\"," + di + ")'>"
+          + "<div class='checkbox" + (isDone ? " checked" : "") + "' style='" + cbst + "'>"
+          + "<span class='check-mark'>鉁?/span></div>"
+          + "<div style='flex:1'>"
+          + "<div class='ex-name'>" + ex.name + "</div>"
+          + "<div class='ex-meta'>"
+          + "<span class='ex-badge' style='background:" + c.bb + ";color:" + c.ac + "'>" + ex.sets + " x " + ex.reps + "</span>"
+          + "<span class='ex-weight'>" + ex.weight + "</span></div>"
+          + "<div class='ex-tip'>馃挕 " + ex.tip + "</div>"
+          + "</div></div>";
+
+        if (ex.img && IMGS[ex.img]) {
+          var imgUrl = BASE + IMGS[ex.img];
+          inner += "<button class='demo-toggle' id='db-" + uid + "' onclick='toggleDemo(\"" + uid + "\")'>"
+            + "Show demo"
+            + "</button>"
+            + "<div class='demo-section' id='ds-" + uid + "'>"
+            + "<img class='demo-img' data-src='" + imgUrl + "' src='' alt='" + ex.name + "'"
+            + " onerror='this.outerHTML=\"<div class=\\\"demo-error\\\">Image not available</div>\"'>"
+            + "</div>";
+        }
+        inner += "</div>";
+      }
+      inner += "</div>";
+
+      var bcls, btxt, bonclick;
+      if (logged) {
+        bcls = "done-btn"; btxt = "鉁?Day " + d.day + " Logged 鈥?Tap to undo"; bonclick = "unlogDay(" + di + ")";
+      } else if (allDone(di)) {
+        bcls = "ready"; btxt = "Log " + d.day + " as Complete 馃敟"; bonclick = "logDay(" + di + ")";
       } else {
-        btnClass = 'complete-day-btn locked';
-        btnText = 'Complete all exercises to log this day';
-        btnOnclick = '';
+        bcls = "locked"; btxt = "Complete all exercises to log this day"; bonclick = "";
       }
-      innerHtml += '<button class="' + btnClass + '"' + (btnOnclick ? ' onclick="' + btnOnclick + '"' : '') + '>' + btnText + '</button>';
+      inner += "<button class='complete-day-btn " + bcls + "'" + (bonclick ? " onclick='" + bonclick + "'" : "") + ">" + btxt + "</button>";
     }
 
-    // Tips
-    innerHtml += '<div class="tips-section"><div class="section-label">Keys to Success</div>';
-    for (var t = 0; t < tips.length; t++) {
-      var tip = tips[t];
-      innerHtml += '<div class="tip-card">'
-        + '<div class="tip-icon">' + tip.icon + '</div>'
-        + '<div><div class="tip-title">' + tip.title + '</div>'
-        + '<div class="tip-body">' + tip.body + '</div></div>'
-        + '</div>';
+    inner += "<div class='tips-section'><div class='section-label'>Keys to Success</div>";
+    for (var t=0; t<tips.length; t++) {
+      inner += "<div class='tip-card'><div class='tip-icon'>" + tips[t].icon + "</div>"
+        + "<div><div class='tip-title'>" + tips[t].title + "</div>"
+        + "<div class='tip-body'>" + tips[t].body + "</div></div></div>";
     }
-    innerHtml += '</div>';
+    inner += "</div>";
 
-    // Reset
-    if (dayIdx === 0) {
-      innerHtml += '<button class="reset-btn" onclick="confirmReset()">Reset All Progress</button>';
+    if (di === 0) {
+      inner += "<button class='reset-btn' onclick='confirmReset()'>Reset All Progress</button>";
     }
 
-    html += '<div class="day-panel' + (isActive ? ' active' : '') + '" id="panel-' + dayIdx + '">' + innerHtml + '</div>';
+    html += "<div class='day-panel" + (di===activeDay ? " active" : "") + "' id='panel-" + di + "'>" + inner + "</div>";
   }
-  document.getElementById('panels').innerHTML = html;
+  document.getElementById("panels").innerHTML = html;
 }
 
-function switchDay(idx) {
-  activeDay = idx;
-  renderAll();
-  window.scrollTo(0, 0);
-}
-
-function toggleCheck(key, dayIdx) {
-  checked[key] = !checked[key];
-  saveState();
-  renderAll();
-}
+function renderAll() { renderTabs(); renderPanels(); }
+function switchDay(idx) { activeDay = idx; renderAll(); window.scrollTo(0,0); }
 
 function confirmReset() {
-  if (confirm('Reset all progress, streaks, and completed days?')) {
-    checked = {};
-    completedDays = [];
-    streakData = { current: 0, best: 0, lastKey: null };
-    saveState();
-    renderStreakBar();
-    renderWeekGrid();
-    renderAll();
-    showToast('Progress reset.');
+  if (confirm("Reset all progress, streaks, and completed days?")) {
+    checked={}; completedDays=[]; streakData={current:0,best:0};
+    save(); renderStreak(); renderGrid(); renderAll();
+    showToast("Progress reset.");
   }
 }
 
-// ── Init ─────────────────────────────────────────────────────────────────────
-renderStreakBar();
-renderWeekGrid();
-renderAll();
+renderStreak(); renderGrid(); renderAll();
 </script>
 </body>
 </html>
